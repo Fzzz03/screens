@@ -10,9 +10,7 @@ class ZakatWelcomeScreen extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Container(
-            color: const Color.fromARGB(255, 13, 51, 32),
-          ),
+          
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
