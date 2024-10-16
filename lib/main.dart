@@ -17,7 +17,7 @@ class ZakatApp extends StatelessWidget {
         primaryColor: const Color(0xFF009688), 
         brightness: Brightness.light,
         fontFamily: 'Roboto', 
-        scaffoldBackgroundColor: const Color(0xFF44ACA3),
+        scaffoldBackgroundColor: const Color(0xFF1D4D4D),
 
       ),
       home: const ZakatWelcomeScreen(),

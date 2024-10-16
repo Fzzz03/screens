@@ -1,12 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'input_field.dart';
-import 'reg.dart'; 
+import 'input_field.dart'; // Import the InputField widget
 
-class ZakatLoginPage extends StatelessWidget {
-  final String role;
-
-  const ZakatLoginPage({super.key, required this.role});
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +48,7 @@ class ZakatLoginPage extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             const Text(
-                              'Enter your information to proceed',
+                              'Create an Account',
                               style: TextStyle(
                                 fontSize: 28,
                                 fontWeight: FontWeight.bold,
@@ -60,12 +57,23 @@ class ZakatLoginPage extends StatelessWidget {
                             ),
                             const SizedBox(height: 30),
                             const InputField(
+                              hintText: 'Name',
+                              icon: Icons.person,
+                            ),
+                            const SizedBox(height: 20),
+                            const InputField(
                               hintText: 'Email',
                               icon: Icons.email,
                             ),
                             const SizedBox(height: 20),
                             const InputField(
                               hintText: 'Password',
+                              icon: Icons.lock,
+                              obscureText: true,
+                            ),
+                            const SizedBox(height: 20),
+                            const InputField(
+                              hintText: 'Confirm Password',
                               icon: Icons.lock,
                               obscureText: true,
                             ),
@@ -80,46 +88,12 @@ class ZakatLoginPage extends StatelessWidget {
                                 ),
                               ),
                               onPressed: () {
-                                // Perform login action
+                                // Handle registration logic here
                               },
                               child: const Text(
-                                'Login',
+                                'Register',
                                 style: TextStyle(
                                     fontSize: 18, color: Colors.white),
-                              ),
-                            ),
-                            const SizedBox(height: 20),
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.red,
-                                padding: const EdgeInsets.symmetric(
-                                    vertical: 16, horizontal: 60),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                              ),
-                              onPressed: () {
-                                // Perform Google login action
-                              },
-                              child: const Text(
-                                'Login with Google',
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white),
-                              ),
-                            ),
-                            const SizedBox(height: 20),
-                            TextButton(
-                              onPressed: () {
-                                // Navigate to RegisterPage when the button is pressed
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => RegisterPage()),
-                                );
-                              },
-                              child: const Text(
-                                'Create Account',
-                                style: TextStyle(color: Colors.white70),
                               ),
                             ),
                           ],

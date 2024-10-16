@@ -10,7 +10,6 @@ class RoleSelectionPage extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -25,7 +24,7 @@ class RoleSelectionPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 40),
                 _RoleButton(
-                  role: 'I\'m a Donor',
+                  role: 'I\'m a Donor    ',
                   icon: Icons.volunteer_activism,
                   color: const Color(0xFF009688),
                   onPressed: () {
